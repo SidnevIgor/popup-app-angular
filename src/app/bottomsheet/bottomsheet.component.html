@@ -1,0 +1,14 @@
+<StackLayout class="bottomsheet-wrapper">
+  <ListView
+    [items]="options"
+    (itemTap)="onTap($event)"
+    separatorColor="gray"
+    class="bottomsheet-list"
+    height="200"
+  >
+    <ng-template let-option="item">
+      <Label class="list-group-item" [text]="option"></Label>
+    </ng-template>
+  </ListView>
+  <Button class="bottomsheet-btn" text="Готово" (tap)="onClose()"></Button>
+</StackLayout>
